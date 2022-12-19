@@ -16,6 +16,7 @@ let iconUrl;
 let backgroundUrl;
 let inputName = "copenhagen";
 
+
 //1.render default data-copenhagen
 async function renderData() {
   const res = await fetch(
@@ -35,6 +36,8 @@ async function renderData() {
   img.src = iconUrl;
 }
 renderData();
+
+
 
 //2.update function
 async function updateData() {
@@ -60,12 +63,16 @@ async function updateData() {
   input.value = "";
 }
 
+
+
 //2.1 search functionality
 searchIcon.addEventListener("click", () => {
   inputName = input.value;
 
   updateData();
 });
+
+
 
 //2.2 keyboard functionality
 document.addEventListener("keydown", function (e) {
